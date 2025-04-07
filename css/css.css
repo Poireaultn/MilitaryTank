@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+:root {
+    --primary-dark: #1a1a1a;
+    --military-green: #4b5320;
+    --olive-drab: #544e38;
+    --sand: #c6b7a5;
+    --khaki: #bab7a3;
+    --camo-dark: #4a5f39;
+    --text-light: #e6e6e6;
+    --text-dark: #333333;
+}
+
+/* Style de base */
+body {
+    font-family: 'Black Ops One', system-ui;
+    margin: 0;
+    padding: 0;
+    color: var(--text-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/Leopard_1A5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header et Navigation */
+header {
+    background: linear-gradient(rgba(75, 83, 32, 0.95), rgba(75, 83, 32, 0.85));
+    padding: 20px;
+    border-bottom: 3px solid var(--sand);
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner img {
+    height: 5em;
+    width: 5em;
+    border: 3px solid var(--sand);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.banner h2 {
+    color: var(--sand);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+.connexion form {
+    display: flex;
+    gap: 10px;
+}
+
+.connexion input {
+    background-color: rgba(198, 183, 165, 0.2);
+    border: 2px solid var(--sand);
+    color: var(--text-light);
+    padding: 8px 15px;
+    font-family: inherit;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--sand);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--sand);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+/* Main Content */
+main {
+    padding: 40px;
+    flex: 1;
+    background-color: rgba(74, 95, 57, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--sand);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 4px;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* Tableau des produits */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    margin-top: 20px;
+}
+
+/* En-têtes du tableau */
+th {
+    background-color: var(--military-green);
+    color: var(--sand);
+    padding: 15px;
+    text-align: center;
+    letter-spacing: 2px;
+    border: 2px solid var(--sand);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Cellules du tableau */
+td {
+    background-color: rgba(84, 78, 56, 0.9);
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    border: 1px solid var(--sand);
+}
+
+/* Définition des largeurs de colonnes */
+table th:nth-child(1),
+table td:nth-child(1) {
+    width: 25%;
+}
+
+table th:nth-child(2),
+table td:nth-child(2) {
+    width: 20%;
+}
+
+table th:nth-child(3),
+table td:nth-child(3) {
+    width: 15%;
+}
+
+/* Colonne stock */
+table th:nth-child(4),
+table td:nth-child(4) {
+    width: 15%;
+    min-width: 150px;
+}
+
+table th:nth-child(5),
+table td:nth-child(5) {
+    width: 25%;
+}
+
+/* Style pour la colonne de stock */
+.stock-col {
+    font-size: 0.9em;
+    color: var(--sand);
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style pour le nombre en stock */
+.stock-number {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--sand);
+    margin-bottom: 5px;
+}
+
+/* Style pour la quantité commandée */
+.qty-commandee {
+    display: inline-block;
+    margin: 0 10px;
+    min-width: 20px;
+}
+
+/* Style pour les boutons + et - */
+.minus, .plus {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+/* Style pour le bouton Ajouter au panier */
+.add-to-cart {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Information du panier */
+.panier-info {
+    display: block;
+    font-size: 0.8em;
+    color: var(--khaki);
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* Images des produits */
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.img-container img {
+    width: 16em;
+    height: 9em;
+    border: 3px solid var(--sand);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.img-container img:hover {
+    transform: scale(2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+/* Boutons */
+button {
+    background: var(--military-green);
+    color: var(--text-light);
+    border: 2px solid var(--sand);
+    padding: 10px 20px;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background: var(--camo-dark);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: var(--khaki);
+    color: var(--khaki);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(rgba(75, 83, 32, 0.85), rgba(75, 83, 32, 0.95));
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid var(--sand);
+}
+
+footer a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--sand);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Message d'erreur */
+.erreur-message {
+    background-color: rgba(139, 0, 0, 0.8);
+    color: var(--text-light);
+    padding: 15px;
+    margin: 20px 0;
+    border: 2px solid #8b0000;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Styles pour les animations */
+.tank-animation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(rgba(75, 83, 32, 0.95), rgba(75, 83, 32, 0.85));
+    padding: 20px 40px;
+    border: 3px solid var(--sand);
+    border-radius: 10px;
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.tank-animation.active {
+    display: block;
+    opacity: 1;
+}
+
+.tank-animation .message {
+    color: var(--sand);
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Style spécifique pour l'animation de connexion */
+.login-animation {
+    background: linear-gradient(rgba(139, 0, 0, 0.95), rgba(139, 0, 0, 0.85));
+}
+
+/* Style spécifique pour l'animation de message envoyé */
+.form-animation {
+    background: linear-gradient(rgba(34, 139, 34, 0.95), rgba(34, 139, 34, 0.85));
+}

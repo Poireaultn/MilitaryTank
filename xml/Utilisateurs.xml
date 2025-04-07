@@ -1,0 +1,14 @@
+<main>
+    <Utilisateur>
+        <login>PaulFruton</login>
+        <mdp>PaulFrutonmdp</mdp>
+    </Utilisateur>
+    <Utilisateur>
+        <login>RomainDujol</login>
+        <mdp>RomainDujolmdp</mdp>
+    </Utilisateur>
+    <Utilisateur>
+        <login>BorisLabrador</login>
+        <mdp>BorisLabradormdp</mdp>
+    </Utilisateur>
+</main>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tanks>
+    <tanksMoyen>
+        <tank id="moyen_Leopard_1A5">
+            <nom>Leopard 1A5</nom>
+            <prix>150.000</prix>
+            <image>Leopard_1A5.jpg</image>
+            <stock>20</stock>
+        </tank>
+        <tank id="moyen_AMX_30">
+            <nom>AMX 30</nom>
+            <prix>130.000</prix>
+            <image>AMX_30.jpg</image>
+            <stock>27</stock>
+        </tank>
+        <tank id="moyen_Centurion_MK7/1">
+            <nom>Centurion MK7/1</nom>
+            <prix>140.000</prix>
+            <image>Centurion_MK7|1.jpg</image>
+            <stock>8</stock>
+        </tank>
+        <tank id="moyen_Panther">
+            <nom>Panther</nom>
+            <prix>175.000</prix>
+            <image>Panther.jpg</image>
+            <stock>5</stock>
+        </tank>
+        <tank id="moyen_T34-85">
+            <nom>T34-85</nom>
+            <prix>175.000</prix>
+            <image>T34-85.jpg</image>
+            <stock>17</stock>
+        </tank>
+    </tanksMoyen>
+
+    <tanksLourd>
+        <tank id="lourd_Tigre_1">
+            <nom>Tiger 1</nom>
+            <prix>250.000</prix>
+            <image>Tiger_1.jpg</image>
+            <stock>3</stock>
+        </tank>
+        <tank id="lourd_IS_3">
+            <nom>IS 3</nom>
+            <prix>200.000</prix>
+            <image>IS_3.jpg</image>
+            <stock>20</stock>
+        </tank>
+        <tank id="lourd_AMX_50">
+            <nom>AMX 50</nom>
+            <prix>190.000</prix>
+            <image>AMX_50.jpg</image>
+            <stock>12</stock>
+        </tank>
+        <tank id="lourd_M103">
+            <nom>M103</nom>
+            <prix>210.000</prix>
+            <image>M103.jpg</image>
+            <stock>9</stock>
+        </tank>
+    </tanksLourd>
+
+    <tanksLeger>
+        <tank id="leger_AMX_13_105">
+            <nom>AMX 13 105</nom>
+            <prix>150.000</prix>
+            <image>AMX_13_105.jpg</image>
+            <stock>21</stock>
+        </tank>
+        <tank id="leger_M551_Sheridan">
+            <nom>M551 Sheridan</nom>
+            <prix>180.000</prix>
+            <image>M551_Sheridan.jpg</image>
+            <stock>12</stock>
+        </tank>
+        <tank id="leger_PT-76">
+            <nom>PT-76</nom>
+            <prix>125.000</prix>
+            <image>PT-76.jpg</image>
+            <stock>14</stock>
+        </tank>
+        <tank id="leger_M3_Stuart">
+            <nom>M3 Stuart</nom>
+            <prix>110.000</prix>
+            <image>M3_Stuart.jpg</image>
+            <stock>19</stock>
+        </tank>
+    </tanksLeger>
+</tanks> 
