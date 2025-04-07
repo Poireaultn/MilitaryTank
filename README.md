@@ -6,7 +6,6 @@ Ce projet est un site web de vente de tanks militaires développé en PHP. Il pe
 
 - PHP 7.4 ou supérieur
 - MySQL 5.7 ou supérieur
-- Serveur web (Apache recommandé)
 - PDO PHP Extension
 - Un navigateur web moderne
 
@@ -14,7 +13,7 @@ Ce projet est un site web de vente de tanks militaires développé en PHP. Il pe
 
 1. **Cloner le projet**
    ```bash
-   git clone [URL_DU_REPO]
+   git clone https://github.com/Poireaultn/MilitaryTank.git
    cd [NOM_DU_DOSSIER]
    ```
 
@@ -23,8 +22,8 @@ Ce projet est un site web de vente de tanks militaires développé en PHP. Il pe
    - Modifier les informations de connexion si nécessaire :
      ```php
      $host = "localhost";
-     $user = "root";
-     $password = "cytech0001";
+     $user = "NomUserSQL";
+     $password = "MDPSQL";
      $dbname = "military_tank";
      ```
 
@@ -40,9 +39,15 @@ Ce projet est un site web de vente de tanks militaires développé en PHP. Il pe
    - Insérer les données initiales (catégories, tanks, utilisateurs de test)
 
 4. **Configuration du serveur web**
-   - Placer le projet dans le répertoire web de votre serveur
-   - S'assurer que le serveur web a les permissions nécessaires sur les fichiers
-   - Configurer le virtual host si nécessaire
+   - Placer vous dans le répertoire du projet
+   - Exécuter le lancement d'un serveur local :
+     ```bash
+     php -S localhost:8080
+     ```
+   - Sur votre navigateur entrez dans la barre d'url :
+     ```
+     localhost:8080/Index.php
+     ```
 
 ## Structure de la base de données
 
@@ -82,14 +87,3 @@ Trois comptes utilisateurs sont créés par défaut :
 Si vous rencontrez des erreurs lors de l'initialisation de la base de données :
 1. Vérifier que MySQL est bien démarré
 2. Vérifier les permissions de l'utilisateur MySQL
-3. S'assurer que le port MySQL par défaut (3306) est utilisé
-
-## Support
-
-Pour toute question ou problème, vous pouvez :
-1. Ouvrir une issue sur le repository
-2. Contacter l'équipe de développement
-
-## Licence
-
-Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails. 
